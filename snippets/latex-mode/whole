@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: whole
+# key: ZZ
+# group: math
+# condition: (and (texmathp) 'auto)
+# --
+\\mathbb{Z}

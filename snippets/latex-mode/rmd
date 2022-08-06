@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: rmd
+# key: dd
+# group: math
+# condition: (and (texmathp) 'auto)
+# --
+\\mathrm{d}

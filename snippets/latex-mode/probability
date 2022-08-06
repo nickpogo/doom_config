@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: probability
+# key: PP
+# group: math
+# condition: (and (texmathp) 'auto)
+# --
+\\mathcal{P}
