@@ -13,3 +13,4 @@
 (package! org-reveal)
 (package! lsp-ltex)
 (package! mw-thesaurus)
+(package! sdcv) ; stardict

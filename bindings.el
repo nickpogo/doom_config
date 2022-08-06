@@ -13,9 +13,17 @@
   :after latex
   :map LaTeX-mode-map
   "C-S-m" #'latex-math-from-calc
-  "<f2>"  #'mw-thesaurus-lookup-dwim
+  ;; "<f2>"  #'mw-thesaurus-lookup-dwim
   ;; "<f2>"  #'wordnut-search
+  "<f2>"  #'sdcv-search-pointer
   "<f3>"  #'powerthesaurus-lookup-synonyms-dwim
+)
+
+
+(map!
+  :after sdcv
+  :map sdcv-mode-map
+  "<f2>"  #'sdcv-search-pointer
 )
 
 
