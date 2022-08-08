@@ -58,6 +58,7 @@
      (setq reftex-plug-into-AUCTeX t)
      (setq turn-on-reftex t)
      (setq reftex-isearch-minor-mode t)
+     (setq prettify-symbols-unprettify-at-point 'right-edge) ; the best thing for pretty
      ;; (setq turn-off-auto-fill t)
      ;; (setq TeX-PDF-mode t)
      ;; (setq TeX-save-query nil)
@@ -191,19 +192,14 @@
         (yas-expand)))))
 
 
-
-
-
-;; spellcheck
+;; spellcheck ----------------------------------------------------------------------------
 (setq ispell-local-dictionary "en_US")
 (setq ispell-program-name "/usr/bin/hunspell")
 (setq ispell-local-dictionary-alist 
       '(("en_US" "[[:alpha:]]" "[^[:alpha:]]" "[']" nil ("-d" "en_US,ru_RU") nil utf-8)))
-;; (global-prettify-symbols-mode 1)
 
 
-;; (setq langtool-language-tool-jar "/home/nickpogo/Programs/LanguageTool-5.8/languagetool-commandline.jar")
-
+;; languagetool --------------------------------------------------------------------------
 (use-package lsp-ltex
   :ensure t
   :hook (text-mode . (lambda ()
@@ -305,9 +301,3 @@
 ;;    'user
 ;;    '(variable-pitch ((t (:family "Crimson Text" :height 160 :weight thin))))
 ;;    '(fixed-pitch ((t ( :family "Fira Code" :height 160)))))
-
-
-
-;; ----------------------------------------------------------
-
-;; (setq todoist-token "c3c4ba495142f7799d2327a99b3d56bb40c4f35e")

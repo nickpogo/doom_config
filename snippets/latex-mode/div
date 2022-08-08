@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: divergence
+# key: div
+# group: math
+# condition: (and (texmathp) 'auto)
+# --
+\\mathrm{div}

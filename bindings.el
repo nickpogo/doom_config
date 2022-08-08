@@ -17,6 +17,8 @@
   ;; "<f2>"  #'wordnut-search
   "<f2>"  #'sdcv-search-pointer
   "<f3>"  #'powerthesaurus-lookup-synonyms-dwim
+  "C-c m" (lambda () (interactive) (LaTeX-environment 1) ) ; this modifies environment
+                                        ; another superkey is mtd, it adds \left and \right
 )
 
 
