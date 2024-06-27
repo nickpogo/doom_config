@@ -5,7 +5,7 @@
 
 
 ;; Default font
-(setq doom-font (font-spec :family "Fira Mono" :size 28))
+(setq doom-font (font-spec :family "Fira Mono" :size 23))
 
 ;; No quit confirmation
 (setq confirm-kill-emacs nil)
@@ -39,18 +39,19 @@
 ;; LaTeX
 ;; ---------------------------------------------------------
 
-;; Otherwise I wasn't able to turn it on -------------------------------------------------
+;; Otherwise I wasn'doom t able to turn it on -------------------------------------------------
 (use-package! latex
   :hook ((LaTeX-mode . prettify-symbols-mode))
   :config
-  (setq +latex-viewers '(evince))
+  ;(setq +latex-viewers '(pdf-tools))
 )
 
 ;; The only way to change pdf viewer
 (after! tex
   (setq TeX-view-program-selection nil)
-  (setq +latex-viewers '(evince))
-  (load! "../.emacs.d/modules/lang/latex/+viewers")
+  ; (setq +latex-viewers '(evince))
+  (setq +latex-viewers '(zathura))
+  (load! "../.config/emacs/modules/lang/latex/+viewers")
 )
 
 (add-hook! LaTeX-mode
@@ -205,8 +206,10 @@
   :hook (text-mode . (lambda ()
                        (require 'lsp-ltex)
                        (lsp)))  ; or lsp-deferred
-  :init
-  (setq lsp-ltex-version "15.2.0"))  ; make sure you have set this, see below
+ :init
+(setq lsp-ltex-ls-path "/home/nickpogo/Programs/ltex-ls-16.0.0/")
+(setq lsp-ltex-version "16.0.0") ; make sure you have set this, see below
+)
 
 
 ;; ---------------------------------------------------------
